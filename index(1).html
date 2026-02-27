@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ἑλληνικαὶ Προθέσεις — Ancient Greek Prepositions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background decoration -->
+  <div class="bg-pattern"></div>
+  <div class="column left-col"></div>
+  <div class="column right-col"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-ornament top">⸻ ✦ ⸻</div>
+    <p class="header-greek">Ἑλληνικαὶ Προθέσεις</p>
+    <h1>Ancient Greek Prepositions</h1>
+    <p class="subtitle">A Scholarly Companion to Greek Particles of Place, Motion & Relation</p>
+    <div class="header-ornament bottom">⸻ ✦ ⸻</div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <button class="nav-btn active" data-view="list">Reference List</button>
+    <button class="nav-btn" data-view="learn">Flashcard Study</button>
+    <button class="nav-btn" data-view="cases">By Case</button>
+    <button class="nav-btn" data-view="quiz">Quiz</button>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- LIST VIEW -->
+    <section id="view-list" class="view active">
+      <div class="section-header">
+        <h2>Complete Reference List</h2>
+        <p>All major ancient Greek prepositions with cases governed and core meanings</p>
+      </div>
+      <div class="filter-bar">
+        <input type="text" id="search-input" placeholder="Search prepositions…" />
+        <select id="case-filter">
+          <option value="">All Cases</option>
+          <option value="genitive">Genitive</option>
+          <option value="dative">Dative</option>
+          <option value="accusative">Accusative</option>
+          <option value="multiple">Multiple Cases</option>
+        </select>
+      </div>
+      <div class="prep-grid" id="prep-grid"></div>
+    </section>
+
+    <!-- LEARN / FLASHCARD VIEW -->
+    <section id="view-learn" class="view">
+      <div class="section-header">
+        <h2>Flashcard Study</h2>
+        <p>Click the card to reveal its meaning. Use the arrows to navigate.</p>
+      </div>
+      <div class="flashcard-area">
+        <div class="flashcard" id="flashcard">
+          <div class="card-inner">
+            <div class="card-front">
+              <span class="card-greek" id="card-greek"></span>
+              <span class="card-romanization" id="card-roman"></span>
+              <span class="card-hint">Click to reveal</span>
+            </div>
+            <div class="card-back">
+              <div class="card-meaning" id="card-meaning"></div>
+              <div class="card-cases-display" id="card-cases-display"></div>
+              <div class="card-example" id="card-example"></div>
+            </div>
+          </div>
+        </div>
+        <div class="flashcard-controls">
+          <button id="prev-btn">← Prev</button>
+          <span id="card-counter">1 / 30</span>
+          <button id="next-btn">Next →</button>
+        </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar-fill" id="progress-fill"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BY CASE VIEW -->
+    <section id="view-cases" class="view">
+      <div class="section-header">
+        <h2>Grouped by Case Governed</h2>
+        <p>Understanding which case a preposition governs is essential to reading Greek</p>
+      </div>
+      <div class="case-groups" id="case-groups"></div>
+    </section>
+
+    <!-- QUIZ VIEW -->
+    <section id="view-quiz" class="view">
+      <div class="section-header">
+        <h2>Test Your Knowledge</h2>
+        <p>Choose the correct meaning for each preposition</p>
+      </div>
+      <div class="quiz-area">
+        <div id="quiz-prompt" class="quiz-prompt"></div>
+        <div id="quiz-options" class="quiz-options"></div>
+        <div id="quiz-feedback" class="quiz-feedback"></div>
+        <div class="quiz-score-bar">
+          <span id="quiz-score">Score: 0 / 0</span>
+          <button id="quiz-next" style="display:none">Next Question →</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-ornament">✦ ✦ ✦</div>
+    <p>Based on classical Attic Greek usage · References: Smyth's <em>Greek Grammar</em>, LSJ Lexicon</p>
+    <p class="footer-greek">Σπεῦδε βραδέως — Make haste slowly</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
